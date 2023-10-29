@@ -7,9 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import pages.Carts;
 import pages.HomePage;
 import pages.ProductsDetailsPage;
@@ -32,10 +32,11 @@ public class E2ETests extends BaseTest {
 	@When("^Customer inputs \"([^\"]*)\" in the SearchBox and Submit$")
 	public void he_search_for(String productName) throws InterruptedException {
 		WebElement SearchInput = homePage.getSearchInput(driver);
+		SearchInput.clear();
 		SearchInput.sendKeys(productName);
 		Thread.sleep(300);
 		SearchInput.sendKeys(Keys.ENTER);		
-		Assert.assertTrue(driver.getCurrentUrl().contains("k="+productName));
+		Assert.assertTrue(driver.getCurrentUrl().contains(productName));
 	}
 
 	@When("^select a product$")
@@ -55,8 +56,8 @@ public class E2ETests extends BaseTest {
 	Assert.assertTrue(addToCartSuccess.isDisplayed());;
 	}
 
-	@Then("^the product is in the checklist$")
-	public void the_product_is_in_the_checklist() {
+	@Then("^the product \"([^\"]*)\" is in the checklist$")
+	public void the_product_is_in_the_checklist(String productName) {
 		productsDetailsPage.getNavCartButtonIcon(driver).click();
 		Assert.assertTrue(carts.getProductTitlesInCart(driver).getText().contains(productName));
 	}

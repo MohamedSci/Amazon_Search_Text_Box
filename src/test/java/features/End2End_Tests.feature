@@ -6,10 +6,10 @@ Feature: Automated Amazon search End2End testing
     When Customer inputs "<productName>" in the SearchBox and Submit
     And select a product
     And moves to product details and click Add to Carts button
-    Then the product is in the checklist
+    Then the product "<productName>" is in the checklist
 
 
     Examples:
       | productName               | 
       | قلم |
-	  | ترابيزة |
+	  | شنطة |

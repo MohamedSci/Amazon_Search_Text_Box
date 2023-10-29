@@ -6,9 +6,10 @@
       <class name="tests.HomePageTest">
         <methods>
           <include name="quiteAll"/>
+          <include name="setUpClass"/>
           <include name="takeScreenOnFailor"/>
-          <include name="inputAndSubmitSearch"/>
           <include name="inititialize"/>
+          <include name="tearDownClass"/>
           <include name="NavigationAfterSelectionOFASuggesstions"/>
           <include name="check_catagory_drop_down_Button"/>
           <include name="inputAndPressEnter"/>

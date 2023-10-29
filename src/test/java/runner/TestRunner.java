@@ -1,6 +1,6 @@
 package runner;
 
-import cucumber.api.CucumberOptions;
+import io.cucumber.testng.CucumberOptions;
 import tests.BaseTest;
 
 @CucumberOptions(features="src/test/java/features"
