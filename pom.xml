@@ -3,11 +3,35 @@
   <groupId>Amazon</groupId>
   <artifactId>com.mohamedsaid</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+      <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+  <groupId>Amazon</groupId>
+  <artifactId>com.mohamedsaid</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>C:\Users\moham\OneDrive\Desktop\AAIB_Technical_challenge_updated\AAIB_Technical_challenge\1.Amazon\test_ng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+  
   <dependencies>
-
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
+    <version>4.14.1</version>
+</dependency>
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-support</artifactId>
     <version>4.14.1</version>
 </dependency>
 

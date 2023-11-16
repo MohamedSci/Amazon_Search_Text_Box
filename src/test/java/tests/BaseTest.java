@@ -28,7 +28,7 @@ public class BaseTest extends AbstractTestNGCucumberTests{
 		driver = new ChromeDriver(chromeOptions);
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.navigate().to("https://www.amazon.eg/");
+		driver.navigate().to("https://www.amazon.com/");
 	}
 	
 	@Test
@@ -45,7 +45,7 @@ public class BaseTest extends AbstractTestNGCucumberTests{
 			// Take A Screen Shot for Failed Element
 			helper.takeElementsScreenshot(driver, result.getName());
 			// Take Screen Shot to the Full page
-			helper.captureFullPageScreenshot(driver, result.getName());
+//			helper.captureFullPageScreenshot(driver, result.getName());
 		}
 	}
 	

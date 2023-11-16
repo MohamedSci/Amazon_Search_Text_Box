@@ -13,12 +13,12 @@ public class HomePage extends Base{
 	}
 //To Choose the Product Category	
 	public WebElement getProductCategoryDropdownBox(WebDriver driver) {
-		return findElementByXPath(driver,"//select[@id=\"searchDropdownBox\"]");
+		return findElementById(driver,"\"nav-search-label-id\"");
 	}
 	
 	//To Choose the Product Category	
 		public List<WebElement> getAllProductCategoryOptions(WebDriver driver) {
-			return findManyElementsByXPath(driver,"//select[@id=\"searchDropdownBox\"]//child::option");
+			return findManyElementsByXPath(driver,"//select[@id=\"searchDropdownBox\"]/option");
 		}	
 	
 // The Search Submit Button Icon	
@@ -32,7 +32,7 @@ public class HomePage extends Base{
 
 	// The Box in which the suggestions are displayed
 		public WebElement getFirst_Suggestions(WebDriver driver) {
-			return findElementByXPath(driver,"//div[@class=\"s-suggestion-trending-container\"]/child::div[1]");
+			return findElementByXPath(driver,"//div[@class=\"s-suggestion-trending-container\"]/child::div[3]");
 		}
 	
 }
